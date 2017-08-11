@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_test_data"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.extremeplayer.quizme.TestDataActivity">
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:padding="5dp"
+        android:textColor="#607D8B"
+        android:textStyle="bold"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:background="@null"
+        android:id="@+id/question"
+        android:layout_below="@+id/timer"
+        android:layout_width="match_parent"
+        android:layout_height="140dp"
+        android:layout_margin="5dp"
+        android:textColor="#000"
+        style="@style/fourOptions"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_below="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#BDBDBD"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/view"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/A"
+            style="@style/fourOptions"
+            android:text="@string/aText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:id="@+id/first_option"
+            style="@style/fourOptions"
+            android:layout_toRightOf="@+id/A"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/textview_background"
+            android:onClick="onOptionsClick"
+            android:tag="1"/>
+
+        <TextView
+            android:id="@+id/B"
+            style="@style/fourOptions"
+            android:text="@string/bText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_below="@+id/A" />
+
+        <TextView
+            android:id="@+id/second_option"
+            style="@style/fourOptions"
+            android:layout_toRightOf="@+id/B"
+            android:layout_below="@+id/first_option"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/textview_background"
+            android:onClick="onOptionsClick"
+            android:tag="2"/>
+
+        <TextView
+            android:id="@+id/C"
+            style="@style/fourOptions"
+            android:text="@string/cText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_below="@+id/B" />
+
+        <TextView
+            android:id="@+id/third_option"
+            style="@style/fourOptions"
+            android:layout_toRightOf="@+id/C"
+            android:layout_below="@+id/second_option"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/textview_background"
+            android:onClick="onOptionsClick"
+            android:tag="3"/>
+
+        <TextView
+            android:id="@+id/D"
+            style="@style/fourOptions"
+            android:text="@string/dText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/C" />
+
+        <TextView
+            android:id="@+id/fourth_option"
+            style="@style/fourOptions"
+            android:layout_toRightOf="@+id/D"
+            android:layout_below="@+id/third_option"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/textview_background"
+            android:onClick="onOptionsClick"
+            android:tag="4"/>
+
+        <TextView
+            android:id="@+id/num1"
+            style="@style/quesView"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/fourth_option"
+            android:text="@string/quesNum" />
+
+        <TextView
+            android:id="@+id/by"
+            style="@style/quesView"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@+id/num1"
+            android:layout_below="@+id/fourth_option"
+            android:text="@string/divider" />
+
+        <TextView
+            android:id="@+id/num2"
+            style="@style/quesView"
+            android:layout_toRightOf="@+id/by"
+            android:layout_marginTop="15dp"
+            android:layout_below="@+id/fourth_option"
+            android:text="@string/totQues" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="#0D47A1">
+
+        <ImageView
+            android:id="@+id/prevQues"
+            android:layout_width="50dp"
+            style="@style/imageView"
+            android:src="@drawable/doubleleftarrow2"
+            android:onClick="onBackwardClick"
+            android:background="@drawable/mytext"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            style="@style/imageView"
+            android:layout_weight="1"
+            android:src="@drawable/skippingrope"
+            android:background="@drawable/mytext"
+            android:onClick="gotoNumber1"/>
+
+        <ImageView
+            android:id="@+id/stopTest"
+            android:layout_width="0dp"
+            style="@style/imageView"
+            android:layout_weight="1"
+            android:src="@drawable/stop"
+            android:background="@drawable/mytext"
+            android:onClick="stopTest"/>
+
+        <ImageView
+            android:id="@+id/nextQues"
+            android:layout_width="50dp"
+            style="@style/imageView"
+            android:src="@drawable/doublerightarrow2"
+            android:onClick="onForwardClick"
+            android:background="@drawable/mytext"/>
+    </LinearLayout>
+</RelativeLayout>

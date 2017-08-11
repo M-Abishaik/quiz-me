@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity">
+
+    <item
+    android:id="@+id/data1"
+    android:title="DummyData1"
+    app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data2"
+        android:title="DummyData2"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data3"
+        android:title="DummyData3"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data4"
+        android:title="DummyData4"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/data5"
+        android:title="DummyData5"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data6"
+        android:title="DummyData6"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data7"
+        android:title="DummyData7"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data8"
+        android:title="DummyData8"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data9"
+        android:title="DummyData9"
+        app:showAsAction="never"/>
+
+    <item
+        android:id="@+id/data10"
+        android:title="DummyData10"
+        app:showAsAction="never"/>
+</menu>

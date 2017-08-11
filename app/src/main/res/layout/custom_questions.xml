@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/myId"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:background="@null"
+        android:id="@+id/question"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_margin="5dp"
+        android:textColor="#000"
+        style="@style/fourOptions"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#BDBDBD"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:id="@+id/A"
+            style="@style/fourOptions"
+            android:text="@string/aText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp" />
+
+        <TextView
+            android:id="@+id/first_option"
+            style="@style/fourOptions"
+            android:layout_toRightOf="@+id/A"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/textview_background"
+            android:onClick="onOptionsClick"
+            android:tag="1"/>
+
+        <TextView
+            android:id="@+id/B"
+            style="@style/fourOptions"
+            android:text="@string/bText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_below="@+id/A" />
+
+        <TextView
+            android:id="@+id/second_option"
+            style="@style/fourOptions"
+            android:layout_toRightOf="@+id/B"
+            android:layout_below="@+id/first_option"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/textview_background"
+            android:onClick="onOptionsClick"
+            android:tag="2"/>
+
+        <TextView
+            android:id="@+id/C"
+            style="@style/fourOptions"
+            android:text="@string/cText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_below="@+id/B" />
+
+        <TextView
+            android:id="@+id/third_option"
+            style="@style/fourOptions"
+            android:layout_toRightOf="@+id/C"
+            android:layout_below="@+id/second_option"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/textview_background"
+            android:onClick="onOptionsClick"
+            android:tag="3"/>
+
+
+        <TextView
+            android:id="@+id/D"
+            style="@style/fourOptions"
+            android:text="@string/dText"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginBottom="10dp"
+            android:layout_below="@+id/C" />
+
+        <TextView
+            android:id="@+id/fourth_option"
+            style="@style/fourOptions"
+            android:layout_toRightOf="@+id/D"
+            android:layout_below="@+id/third_option"
+            android:layout_marginBottom="5dp"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="35dp"
+            android:background="@drawable/textview_background"
+            android:onClick="onOptionsClick"
+            android:tag="4"/>
+
+        <TextView
+            android:id="@+id/num1"
+            style="@style/quesView"
+            android:layout_below="@+id/fourth_option"
+            android:text="@string/quesNum" />
+
+        <TextView
+            android:id="@+id/by"
+            style="@style/quesView"
+            android:layout_toRightOf="@+id/num1"
+            android:layout_below="@+id/fourth_option"
+            android:text="@string/divider" />
+
+        <TextView
+            android:id="@+id/num2"
+            style="@style/quesView"
+            android:layout_toRightOf="@+id/by"
+            android:layout_below="@+id/fourth_option"
+            android:text="@string/totQues" />
+
+    </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/optionsLayout"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:background="#0D47A1">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/skippingrope"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:onClick="gotoNumber"
+            android:background="@drawable/mytext"/>
+
+        <ImageView
+            android:id="@+id/formula"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/equation"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:onClick="showFormula"
+            android:background="@drawable/mytext"/>
+
+        <ImageView
+            android:id="@+id/bookmarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/bookmark2"
+            android:layout_weight="1"
+            android:paddingLeft="5dp"
+            android:onClick="Bookmark"
+            android:background="@drawable/mytext"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#0D47A1">
+
+        <ImageView
+            android:id="@+id/prevQues"
+            android:layout_width="50dp"
+            style="@style/imageView"
+            android:src="@drawable/doubleleftarrow2"
+            android:onClick="onBackwardClick"
+            android:background="@drawable/mytext"/>
+
+        <ImageView
+            android:layout_width="0dp"
+            style="@style/imageView"
+            android:layout_weight="1"
+            android:src="@drawable/key3"
+            android:background="@drawable/mytext"/>
+
+        <ImageView
+            android:id="@+id/settings"
+            android:layout_width="0dp"
+            style="@style/imageView"
+            android:layout_weight="1"
+            android:src="@drawable/settings2"
+            android:onClick="showOptions"
+            android:background="@drawable/mytext"/>
+
+        <ImageView
+            android:id="@+id/nextQues"
+            android:layout_width="50dp"
+            style="@style/imageView"
+            android:src="@drawable/doublerightarrow2"
+            android:onClick="onForwardClick"
+            android:background="@drawable/mytext"/>
+    </LinearLayout>
+</LinearLayout>

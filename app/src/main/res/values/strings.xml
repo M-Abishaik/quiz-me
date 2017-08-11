@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">QuizMe</string>
+    <string name="key">Key</string>
+    <string name="Design"><u>Designed by</u></string>
+    <string name="hye">Hope you enjoy :)</string>
+    <string name="name">abishaik.m</string>
+    <string name="aText">A</string>
+    <string name="bText">B</string>
+    <string name="cText">C</string>
+    <string name="dText">D</string>
+    <string name="quesNum">0</string>
+    <string name="divider">/</string>
+    <string name="totQues">0</string>
+    <string name="study">study mode</string>
+    <string name="test">test mode</string>
+    <string name="challenge">challenge mode</string>
+    <string name="bookmarks">Bookmarks</string>
+    <string name="Shared_pref_file">Preferences_file</string>
+    <string name="currQuesNum">Current_question_num</string>
+    <string name="currQues">Current_question</string>
+    <string name="firstOption">First_option</string>
+    <string name="secondOption">Second_option</string>
+    <string name="thirdOption">Third_option</string>
+    <string name="fourthOption">Fourth_option</string>
+    <string name="totQuestion">Total_questions</string>
+    <string name="correctAnswer">Correct_Answer</string>
+    <string name="correctOption">Correct_Option</string>
+    <string name="popup">Pop_up</string>
+    <string name="question">Questions</string>
+    <string name="bookmark_file">Bookmarks_file</string>
+    <string name="challenge_file">Challenge_File</string>
+    <string name="challenge_flag">Challenge_flag</string>
+    <string name="init_challenge_state">Initial_Challenge_score</string>
+    <string name="challenge_position">Challenge_position</string>
+    <string name="ultimate_tracker">Ultimate_tracker</string>
+    <string name="my_urls">Urls</string>
+</resources>

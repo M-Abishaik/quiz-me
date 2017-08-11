@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/tan_background"
+    tools:context="com.extremeplayer.quizme.MainActivity">
+
+    <View
+        android:id="@+id/view1"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="150dp"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/holo_blue_light" />
+
+    <TextView
+        android:id="@+id/Study"
+        style="@style/frontView"
+        android:layout_toRightOf="@+id/view1"
+        android:text="@string/study"/>
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="65dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="150dp"
+        android:layout_toRightOf="@+id/Study"
+        android:background="@android:color/holo_blue_light" />
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/view1"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/holo_blue_light"/>
+
+    <TextView
+        android:id="@+id/Test"
+        style="@style/frontView"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/Study"
+        android:layout_toRightOf="@+id/view3"
+        android:text="@string/test"/>
+
+    <View
+        android:id="@+id/view4"
+        android:layout_width="65dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@+id/Test"
+        android:layout_below="@+id/view2"
+        android:background="@android:color/holo_blue_light" />
+
+    <View
+        android:id="@+id/view5"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:layout_below="@+id/view3"
+        android:layout_marginTop="70dp"
+        android:layout_alignParentLeft="true"
+        android:background="@android:color/holo_blue_light"/>
+
+    <TextView
+        android:id="@+id/Challenge"
+        style="@style/frontView"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@+id/view5"
+        android:layout_below="@+id/Test"
+        android:text="@string/challenge" />
+
+    <View
+        android:id="@+id/view6"
+        android:layout_width="65dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@+id/Challenge"
+        android:layout_below="@+id/view4"
+        android:background="@android:color/holo_blue_light"/>
+
+    <TextView
+        android:id="@+id/Db"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/Challenge"
+        android:padding="10dp"
+        android:text="Insert To Db"
+        android:layout_marginLeft="140dp"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        android:textSize="15sp"
+        android:layout_gravity="center_vertical"
+        android:foreground="?android:attr/selectableItemBackground"/>
+
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:clickable="true"
+        android:src="@drawable/bookmark1"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+

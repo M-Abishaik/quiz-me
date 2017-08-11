@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_number_popup"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.extremeplayer.quizme.NumberPopup">
+
+    <TextView
+        android:id="@+id/Gototext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Goto"
+        android:textSize="25sp"
+        android:textColor="#42A5F5"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"/>
+
+    <View
+        android:id="@+id/line"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/Gototext"
+        android:layout_height="2dp"
+        android:background="#BDBDBD"/>
+
+    <GridView
+        android:id="@+id/gridView"
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/line"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:numColumns="auto_fit"
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:columnWidth="50dp"
+        android:stretchMode="spacingWidthUniform">
+    </GridView>
+
+</RelativeLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.extremeplayer.quizme">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashScreen"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Transparent">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".StudyActivity"
+            android:label="Study"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".ChallengeActivity"
+            android:label="Challenge"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".TestActivity"
+            android:label="Test Yourself"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".PopupActivity"
+            android:theme="@style/AppTheme.CustomTheme" />
+        <activity android:name=".DataActivity" />
+
+        <provider
+            android:name=".Data.QuestionsProvider"
+            android:authorities="com.extremeplayer.quizme"
+            android:exported="false" />
+
+        <activity
+            android:name=".BookmarkActivity"
+            android:label="Bookmarks"
+            android:parentActivityName=".StudyActivity" />
+        <activity
+            android:name=".FormulaActivity"
+            android:label="Formula" />
+        <activity
+            android:name=".NumberPopup"
+            android:theme="@style/AppTheme.NumberPopupTheme" />
+        <activity android:name=".InsertionActivity" />
+        <activity android:name=".TestDataActivity" />
+        <activity
+            android:name=".ResultsActivity"
+            android:label="Review"
+            android:parentActivityName=".TestActivity" />
+        <activity android:name=".ChallengeDataActivity"></activity>
+    </application>
+
+</manifest>
